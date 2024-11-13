@@ -18,17 +18,16 @@ var maxAreaOfIsland = function(grid) {
         area += dfs(grid, i, j + 1);
         return area;
     }
-    let maxArea = 0
+    let maxArea = 0;
     for(let i=0;i<grid.length;i++){
         for(let j=0;j<grid[0].length;j++){
             if(grid[i][j]===1){
                 let currentArea = dfs(grid, i, j);
-                 maxArea = Math.max(maxArea, currentArea)
+                 maxArea = Math.max(maxArea, currentArea);
             }
             
         }
     }
-
 
     return maxArea;
 };
